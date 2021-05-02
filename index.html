@@ -173,7 +173,7 @@ if( row.Bande == "~B20~") { frequenze = "B20"; iconemarker = L.icon({
 		    statoverifica = "blue"
 	    } else if(row.status == "Non verificato") {statoverifica = "red"};
       var marker = L.marker([row.Latitudine, row.Longitudine], {icon: iconemarker}).bindPopup("<b>LAT:</b> " + row.Latitudine + "<br /><b>LON:</b> " + row.Longitudine + "<br /><b>ENODEB:</b> " + row.eNb + "<br /><b>NOME SITO:</b> " + row.Nomesito + "<br /><b>BANDE:</b> " + frequenze + "<br /><b>CONTRIBUTO:</b> " + row.contributo + "<br /><b>ID SITO:</b> " + row.towerid + "<br /><b>STATO DELLA VERIFICA:</b> " + row.status.fontcolor(statoverifica) + "<br /><b>STATO DEL SITO:</b> " + row.active + "<br /><b>TIPO DI SITO:</b> " + row.type + "<br /><b>SECONDO ENODEB:</b> " + row.seNb + "<br /><b>BANDE ORIGINARIE:</b> " + row.Bande + "<br />").openPopup();
-      marker.bindTooltip("<span>" + row.eNb + "-" +  row.status.fontcolor(statoverifica) + "</span>" , {permanent: true, direction: 'bottom'}).openTooltip();
+      marker.bindTooltip("<span>" + row.eNb + " - " +  row.status.fontcolor(statoverifica) + "</span>" , {permanent: true, direction: 'bottom'}).openTooltip();
 	    
    markers.addLayer(marker); //Aggiungo il layer della mappa a quello dei cluster
 
